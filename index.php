@@ -87,7 +87,7 @@
     <section><form method="get">
       <input name="url" type="url" placeholder="Type or paste the url of your media here" autofocus size="60"></input>
       <select name="ext">
-        <option>Choose *.ext</option>
+        <option value="">Choose *.ext</option>
         <option value="mp3">mp3</option>
         <option value="wav">wav</option>
         <option value="ogg">ogg</option>
