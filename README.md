@@ -13,5 +13,8 @@ If your url has no multimedia extension or a wrong one you can force it by using
 ## Improvements
 
 The possible media playable has not yet been tested.
-Css customisation 
-Introduction page to be done
+
+Player CSS customisation
+
+## Currently tested working extensions
+mp3, ogg, mp4, webm

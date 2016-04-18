@@ -50,14 +50,15 @@
 <html>
 <head>
   <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
   <!-- If you'd like to support IE8 -->
   <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   <title>Lecteur Multimedia</title>
-  <style>body{margin:0;}</style>
 </head>
 
 <body>
+  <?php if(!empty($_GET['url']) && isset($_GET['url'])) { ?>
   <video id="my-video" class="video-js" autoplay controls preload="auto" poster="" data-setup='{"playbackRates":[0.5, 0.75, 1, 1.5, 2] }'>
     <?php if($source){?><source src="<?php echo $url;?>" <?php if(!$disableType) echo 'type="'.$type.'/'.$ext.'"'; ?>><?php } ?>
     <p class="vjs-no-js">
@@ -72,7 +73,53 @@
     $("#my-video").css("width",jQuery(document).width());
     $("#my-video").css("height",jQuery(document).height());
   });
-    
   </script>
+  <?php } else {?>
+    <header><h1>Multimedia Player</h1></header>
+    <section id="text">
+    <img src="http://lecteur.mikeprod.com/logo.png">
+      <h2>Welcome</h2>
+      How to use : Enter your media link below. If your url has no extension you can select the proper one in the list.<br>
+      You can directly access the player by passing your url by parameter as follow : http://lecteur.mikeprod.com/?url=myurl&amp;ext=forcedExtension
+    </section>
+    <section><form method="get">
+      <input name="url" type="url" placeholder="Type or paste the url of your media here" autofocus="autofocus" size="60"></input>
+      <select name="ext">
+        <option>Choose *.ext</option>
+        <option value="mp3">mp3</option>
+        <option value="wav">wav</option>
+        <option value="ogg">ogg</option>
+        <option value="aiff">aiff</option>
+        <option value="aiff">aiff</option>
+        <option value="flac">flac</option>
+        <option value="flac">flac</option>
+        <option value="m4a">m4a</option>
+        <option value="oga">oga</option>
+        <option value="wma">wma</option>
+        <option value="webm">webm</option>
+        <option value="mp4">mp4</option>
+        <option value="mkv">mkv</option>
+        <option value="avi">avi</option>
+        <option value="flv">flv</option>
+        <option value="vob">vob</option>
+        <option value="mov">mov</option>
+        <option value="ogv">ogv</option>
+        <option value="qt">qt</option>
+        <option value="wmv">wmv</option>
+        <option value="m4p">m4p</option>
+        <option value="m4v">m4v</option>
+        <option value="mpg">mpg</option>
+        <option value="mp2">mp2</option>
+        <option value="mpeg">mpeg</option>
+        <option value="m2v">m2v</option>
+        <option value="3gp">3gp</option>
+        <option value="f4v">f4v</option>
+        <option value="f4p">f4p</option>
+      </select>
+      <input type="submit" value="Play"></input>
+    </form></section>
+
+    <section id="notice">No data is gathered on the server with this player. Copyright Mikeprod 2016</section>
+  <?php } ?>
 </body>
 </html>
