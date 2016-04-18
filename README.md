@@ -1,5 +1,5 @@
 # Mikeprod Multimedia Player
-Source for the next multimedia player for lecteur.mikeprod.com
+Source for the multimedia player at lecteur.mikeprod.com
 
 This player uses the Videojs player available at http://videojs.org
 

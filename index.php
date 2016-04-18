@@ -56,7 +56,7 @@
   <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
   <!-- If you'd like to support IE8 -->
   <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-  <title>Lecteur Multimedia</title>
+  <title>Multimedia Player</title>
 </head>
 
 <body>
