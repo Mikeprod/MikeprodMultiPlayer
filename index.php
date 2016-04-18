@@ -51,6 +51,8 @@
 <head>
   <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link rel="icon" type="image/jpg" href="favicon.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.jpg" />
   <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
   <!-- If you'd like to support IE8 -->
   <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
@@ -83,7 +85,7 @@
       You can directly access the player by passing your url by parameter as follow : http://lecteur.mikeprod.com/?url=myurl&amp;ext=forcedExtension
     </section>
     <section><form method="get">
-      <input name="url" type="url" placeholder="Type or paste the url of your media here" autofocus="autofocus" size="60"></input>
+      <input name="url" type="url" placeholder="Type or paste the url of your media here" autofocus size="60"></input>
       <select name="ext">
         <option>Choose *.ext</option>
         <option value="mp3">mp3</option>
