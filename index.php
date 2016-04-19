@@ -51,8 +51,8 @@
 <head>
   <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <link rel="icon" type="image/jpg" href="favicon.jpg" />
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.jpg" />
+  <link rel="icon" type="image/jpg" href="media/favicon.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="media/favicon.jpg" />
   <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
   <!-- If you'd like to support IE8 -->
   <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
@@ -77,9 +77,10 @@
   });
   </script>
   <?php } else {?>
+  	<span id="forkongithub"><a href="https://github.com/Mikeprod/MikeprodMultiPlayer">Fork me on GitHub</a></span>
     <header><h1>Multimedia Player</h1></header>
     <section id="text">
-    <img src="http://lecteur.mikeprod.com/logo.png">
+    <img src="media/logo.png">
       <h2>Welcome</h2>
       How to use : Enter your media link below. If your url has no extension you can select the proper one in the list.<br>
       You can directly access the player by passing your url by parameter as follow : http://lecteur.mikeprod.com/?url=myurl&amp;ext=forcedExtension
