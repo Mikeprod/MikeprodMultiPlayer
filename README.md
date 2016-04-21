@@ -16,5 +16,4 @@ The possible media playable has not yet been tested.
 
 Player CSS customisation
 
-## Currently tested working extensions
-mp3, ogg, mp4, webm
+Add fallback with flash
