@@ -85,7 +85,7 @@
 
 	<body>
 		<?php if(!empty($_GET['url']) && isset($_GET['url'])) { ?>
-			<video id="my-video" class="video-js" autoplay controls preload="auto" poster="" data-setup='{"playbackRates":[0.5, 0.75, 1, 1.5, 2] }'>
+			<video id="my-video" class="video-js" autoplay controls preload="auto" poster="" data-setup='{"playbackRates":[0.5, 0.75, 1, 1.5, 2],"techOrder": ["html5", "flash", "other"]}'>
 				<?php if($source){?><source src="<?php echo $url;?>" <?php if(!$disableType) echo 'type="'.$type.'/'.$ext.'"'; ?>><?php } ?>
 				<p class="vjs-no-js">
 					To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>

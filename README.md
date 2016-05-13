@@ -16,4 +16,4 @@ The possible media playable has not yet been tested.
 
 Player CSS customisation
 
-Add fallback with flash
+Others in the Issue tab
