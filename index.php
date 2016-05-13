@@ -90,6 +90,14 @@
 				<p class="vjs-no-js">
 					To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 				</p>
+			<object type="application/x-shockwave-flash" data="http://vjs.zencdn.net/4.12/video-js.swf" width="100%" height="100%" id="player_flash_api" name="player_flash_api" class="vjs-tech" style="display: block;">
+				<param name="movie" value="http://vjs.zencdn.net/4.12/video-js.swf">
+				<param name="flashvars" value="readyFunction=videojs.Flash.onReady&amp;eventProxyFunction=videojs.Flash.onEvent&amp;errorEventProxyFunction=videojs.Flash.onError&amp;autoplay=true&amp;preload=true&amp;loop=false&amp;muted=false&amp;file=<?php echo $url;?>">
+				<param name="allowScriptAccess" value="always">
+				<param name="allowNetworking" value="all">
+				<param name="wmode" value="opaque">
+				<param name="bgcolor" value="#000000">
+			</object>
 			</video>
 
 			<script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
