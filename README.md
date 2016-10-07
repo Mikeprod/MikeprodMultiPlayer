@@ -37,8 +37,12 @@ If your url has no multimedia extension or a wrong one you can force it by using
 | Android	 | Yes (>=4.4)	| Yes		| Yes (>=4.4)| No 		 | Yes (>=4.4) | No 	   | Yes(>=4.4) |
 | iOS  		 | Yes			| Yes		| No 		 | No 		 | No 		   | No 	   | Yes (<=7)	|
 
+## Video streaming support
+This feature was added to the 4.2.0 release of video.js and supports streams with the following format `rtmp/mp4` and `rtmp/flv`
+The source url must follow the following format : `rtmp://your.streaming.provider.net/cfx/st/&mp4:path/to/video.mp4`
+
+If you do not understand how it is formated here is a litteral explanation : The streaming server **&** The type of stream (mp4 or flv) **:** The path to the video 
+
+Reference : [Streaming Playback](https://github.com/videojs/video.js/blob/master/docs/guides/tech.md) from video.js
 ## Improvements
-
-Player CSS customisation
-
-Others in the Issue tab
+Share it in the issue tab :)
