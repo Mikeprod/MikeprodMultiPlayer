@@ -5,8 +5,12 @@
 
 		if($posDot==False || $posSlash==False || $posDot<=$posSlash)
 			return "noExt";
-		else
-			return substr($urlString, $posDot+1);
+		else{
+			if(strpos($urlString,"rtmp://")===false)
+				return substr($urlString, $posDot+1);
+			else
+				return "rtmp/".substr($urlString, $posDot+1);
+		}
 	}
 
 	function ext2Type($extension){
@@ -31,11 +35,15 @@
 		if($extension=="mpg" || $extension=="mp2" || $extension=="mpeg")
 			return "mpeg";
 
+		if($extension=="rtmp/mp4" || $extension=="rtmp/flv")
+			return substr($extension,5);
+		
 		return $extension;
 	}
 
 	$audioExts=array("mp3","wav","ogg","aiff","flac","m4a","oga","wma");
 	$videoExts=array("webm","mp4","mkv","avi","flv","vob","mov","ogv","qt","wmv","m4p","m4v","mpg","mp2","mpeg","m2v","3gp","f4v","f4p");
+	$streamExts=array("rtmp/mp4","rtmp/flv");
 	$source=False;
 	$disableType=False;
 	$ext="";
@@ -61,7 +69,13 @@
 					$type="video";
 					break;
 				}
-
+			
+			for($i=0;$i<count($streamExts);$i++){
+				if($ext==$streamExts[$i]){
+					$type="rtmp";
+					break;
+				}
+			}
 			$source=True;
 			$ext=ext2Type($ext);
 		}
@@ -124,19 +138,22 @@
 					<input name="url" type="url" placeholder="Type or paste the url of your media here" autofocus size="60"></input>
 					<select name="ext">
 						<option value="">Choose your extension</option>
-						<option>--------------- audio / video ---------------</option>
+						<option>------------------ audio / video ------------------</option>
 						<option value="ogg">ogg / ogv / oga</option>
 						<option value="mp4">mp4 / mkv / m4v (H264 &amp; AAC) / m4a </option>
-						<option value="">-------------------- audio --------------------</option>
+						<option value="">----------------------- audio -----------------------</option>
 						<option value="mp3">mp3</option>
 						<option value="wav">wav</option>
-						<option value="">-------------------- video --------------------</option>
+						<option value="">----------------------- video -----------------------</option>
 						<option value="webm">webm</option>
 						<option value="x-flv">flv / f4v</option>
 						<option value="3gpp">3gp</option> <!-- Does not seem to be working -->
 						<option value="quicktime">mov / qt / vob</option>
 						<option value="avi">avi</option>
 						<option value="mpeg">mpg / mp2 / mpeg</option>
+                        <option>------------------ video stream ------------------</option>
+                        <option value="rtmp/mp4">mp4</option>
+                        <option value="rtmp/flv">flv</option>
 					</select>
 					<input type="submit" value="Play"></input>
 				</form>
